@@ -1,0 +1,173 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="AL_Masry.Site1" %>
+
+<!DOCTYPE html>
+<html lang="ar">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.90" />
+    <title>معهد المصري النموذجي</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        /* ---------- Reset ---------- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+              font-family: "Poppins", sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ---------- Header ---------- */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #03fc6b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        header .header-text {
+            margin-left: 20px;
+        }
+
+        header h1 {
+              font-family: "Poppins", sans-serif;
+            font-size: 35px;
+            color: #fff;
+        }
+
+        header p {
+              font-family: "Poppins", sans-serif;
+            font-size: 30px;
+            color: #fff;
+            margin-top: 5px;
+        }
+
+        /* ---------- Navigation ---------- */
+        nav {
+            background-color: #050505;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffdd57;
+        }
+
+        /* ---------- Main Content ---------- */
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 768px) {
+            
+            header {
+                flex-direction: column;
+            }
+
+            header .header-text {
+                margin-left: 0;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+        }
+        .auto-style1 {
+              font-family: "Poppins", sans-serif;
+            font-size: 40px;
+        }
+        .auto-style2 {
+              font-family: "Poppins", sans-serif;
+            font-size: x-large;
+        }
+        .auto-style3 {
+            font-size: 20px;
+        }
+        .auto-style4 {
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+
+        <!-- Header Section -->
+        <header>
+            <img id="Image1" runat="server" ImageUrl="~/Img/WhatsApp_Image_2025-08-07_at_20.23.49-removebg-preview.png" alt="Logo" src="~/Img/WhatsApp_Image_2025-08-07_at_20.23.49-removebg-preview.png" />
+            <div class="header-text">
+                <h1 class="auto-style1">معهد المصري النموذجي</h1>
+                <p class="auto-style2">للعلوم واللغات</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx" CssClass="auto-style3">الرئيسية</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Mangement.aspx" CssClass="auto-style3">تسجيل الدخول</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/About.aspx" CssClass="auto-style3">حول المعهد</asp:HyperLink>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <asp:Panel ID="Panel1" runat="server">
+                </asp:Panel>
+            </asp:ContentPlaceHolder>
+        </main>
+
+        <!-- Footer -->
+        <footer class="auto-style4">
+            <strong>© 2025 - 2026 جميع الحقوق محفوظة
+        </strong>
+        </footer>
+
+    </form>
+</body>
+</html>
